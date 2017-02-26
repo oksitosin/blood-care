@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="hero-section">
+    <div class="container">
+      
+      <div class="section-content">
+        <h2>Give Blood.</h2>
+        <h2>A gift straight from your heart.</h2>
+
+        <br>
+        <a href="{{ url_for('signup') }}" class="btn-primary">User Sign Up</a>
+        <a href="{{ url_for('hospitalsignup') }}" class="btn-primary">Hospital and Blood Bank Sign Up</a>
+        <a href="{{ url_for('about') }}" class="btn-secondary">Learn more</a> 
+      </div>
+
+      <div class="section-device">
+        <img src="static/img/blood.psd">
+      </div>
+      
+      <div class="clearfix"></div>
+
+    </div>
+  </main>
+{% endblock %}

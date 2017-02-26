@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="hero-section">
+    <div class="container">
+      
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+ <script type="text/javascript" src="script.js"></script>
+     <h2> Hi {{ session['user_name'] }}, please insert your information here.
+     </h2> 
+         <div id="user_form" class="wrapper">
+           <h2>User information</h2>
+             <form action="/home1" method="get">
+               <dl>
+                 <dt>What is your zipcode?
+                 <dt><input type=text name=zipcode id="zipcode" required>
+
+                 <dt> <br> Have you donated blood before?
+                 <dt>
+                <form1 name="prevdonation" id="prevdonation">
+                   <input type="radio" name="prevdonation" value="Yes" checked>Yes</input>
+                   <input type="radio" name="prevdonation" value="No">No</input>
+                 </form1>
+
+                 <dt> <br> <input type=submit id="search" value=Submit class="btn-primary">
+               </dl>
+               <dt>
+             </form>
+
+           </div>
+
+
+
+
+    </div>
+  </main>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="hero-section">
+    <div class="container">
+      
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+ <script type="text/javascript" src="script.js"></script>
+     <h2> Hi {{ session['user_name'] }}, welcome to the BloodCare system. If you are a hospital or a blood bank, please sign up here.
+     </h2> 
+         <div id="user_form" class="wrapper">
+           <h2>Hospital information</h2>
+             <form action="/hospital2" method="get">
+               <dl>
+                <dt>What is the name of your business?
+                 <dt><input type=text name=hospitalName name id="hospitalName">
+                 <dt>What is the zipcode of your business?
+                 <dt><input type=text name=hospitalZipcode id="hospitalZipcode">
+                 <dt style="margin-top: 30px"> <br> <b>What is your current inventory of blood?</b>
+                 <dt> <br> How many pints of blood type O+ do you have?
+                 <dt><input type=number name=O+ id="O+" min=0 value=55 required="true">
+                 <dt> <br> How many pints of blood type O- do you have?
+                 <dt><input type=number name=O- id="O-" min=0 value=55 required="true">
+                 <dt> <br> How many pints of blood type A+ do you have?
+                 <dt><input type=number name=A+ id="A+" min=0 value=55 required="true">
+                 <dt> <br> How many pints of blood type A- do you have?
+                 <dt><input type=number name=A- id="A-" min=0 value=55 required="true">
+                 <dt> <br> How many pints of blood type B+ do you have?
+                 <dt><input type=number name=B+ id="B+" min=0 value=55 required="true">
+                 <dt> <br> How many pints of blood type B- do you have?
+                 <dt><input type=number name=B- id="B-" min=0 value=55 required="true">
+                 <dt> <br> How many pints of blood type AB+ do you have?
+                 <dt><input type=number name=AB+ id="AB+" min=0 value=55 required="true">
+                 <dt> <br> How many pints of blood type AB- do you have?
+                 <dt><input type=number name=AB- id="AB-" min=0 value=55 required="true">
+    
+
+                 <dt> <br> <input type=submit id="search" value=Submit>
+               </dl>
+               <dt>
+             </form>
+
+           </div>
+
+
+
+
+    </div>
+  </main>
+{% endblock %}

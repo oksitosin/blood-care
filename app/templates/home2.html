@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="hero-section">
+    <div class="container">
+    
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+ <script type="text/javascript" src="script.js"></script>
+     <h2> Hi {{ session['user_name'] }}, please insert your information here.
+     </h2> 
+         <div id="user_form" class="wrapper">
+           <h2>User information</h2>
+             <form action="/home3" method="get">
+             
+               <dl>
+
+                 <dt> <br> Are you in general health and feeling well?
+                 <dt>
+                <form1 name="generalHealth" id="generalHealth">
+                   <input type="radio" name="generalHealth" value="Yes" checked>Yes</input>
+                   <input type="radio" name="generalHealth" value="No">No</input>
+                 </form1>
+
+                 <dt> <br> <input type=submit id="search" value=Submit>
+               </dl>
+               <dt>
+             </form>
+
+           </div>
+
+
+
+
+    </div>
+  </main>
+{% endblock %}

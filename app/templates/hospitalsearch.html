@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="about-section">
+    <div class="container">
+    <br>
+    <br>
+    <h1>Blood Type: {{ blood_type }}</h1> 
+    <h1>Zipcode: {{ zipcode }}</h1>
+
+
+    <script type="text/javascript">
+    if ('{{result}}' === 'True') {
+    document.write("<p>Your area needs your blood type. Would you like to make a donation?</p>");
+      }
+      else {
+      	document.write("<p>There is no immediate need in your area. You can search for surrounding neighborhoods to see if there is an immediate need or you are always welcome to donate another time!</p>")
+      }
+    </script>
+
+ 
+
+    <dt> <br> <a href="http://www.redcross.org/give-blood" ><input type=submit id="search" value="Schedule"> </a>
+    <dt> <br> <a href="{{ url_for('nearby') }}" ><input type=submit id="search" value="Search Surrounding Neighborhoods"> </a>
+
+    </div>
+  </main>
+{% endblock %}

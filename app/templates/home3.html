@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="hero-section">
+    <div class="container">
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+ <script type="text/javascript" src="script.js"></script>
+     <h2> Hi {{ session['user_name'] }}, please insert your information here.
+     </h2> 
+         <div id="user_form" class="wrapper">
+           <h2>User information</h2>
+             <form action="/eligibility" method="get">
+               <dl>
+                 <dt>How old are you? (You should be at least 16 years old to make a donation.)
+                 <dt><input type=number name=age id="age" min=16 value=27 required="true"> years old
+                 <dt> <br> How much do you weigh? (If you weigh less than 110 pounds, you are not eligible to donate.)
+                 <dt><input type=number name=weight id="weight" min=110 value=115 required="true"> lbs
+                 <dt> <br> How tall are you, in inches? 
+                 <dt><input type=number name=height id="height" min=58 value=60 required="true"> in
+                  <dt> <br> What is your gender?
+                 <dt>
+                <form1 name="gender" id="gender">
+                   <input type="radio" name="gender" value="Female" checked>Female</input>
+                   <input type="radio" name="gender" value="Male">Male</input>
+                 </form1>
+
+                 <dt> <br> <input type=submit id="search" value=Submit>
+               </dl>
+               <dt>
+             </form>
+
+           </div>
+
+
+
+
+    </div>
+  </main>
+{% endblock %}

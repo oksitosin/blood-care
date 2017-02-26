@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="about-section">
+    <div class="container">
+    <br>
+    <br>
+    <h1>You are not eligible to make a donation! Sorry!</h1>
+    <p>According to your age, weight, height, and gender, you are not eligible to donate blood by Red Cross standards. For more information, please check out the <a href="http://www.redcrossblood.org/donating-blood/eligibility-requirements"> Red Cross eligibility page</a>. </p>
+        <a href="{{ url_for('index') }}" class="btn-login"> Return to Home</a>
+
+    </div>
+  </main>
+{% endblock %}
